@@ -1,6 +1,19 @@
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
+    theme: {
+    extend: {
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        scroll: "scroll 30s linear infinite",
+      },
+    },
+  },
   plugins: [
     tailwindcss(),
   ],
@@ -10,20 +23,3 @@ export default defineConfig({
 
 
 
-// /** @type {import('tailwindcss').Config} */
-// export default {
-//   content: [
-//     "./index.html",
-//     "./src/**/*.{js,ts,jsx,tsx}",
-//   ],
-//   theme: {
-//     extend: { },
-//   },
-//   plugins: [ 
-    
-//     require("daisyui")],
-//     daisyui: {
-//       darkTheme: false, 
-//     },
-  
-// }

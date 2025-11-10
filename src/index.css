@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+.img{
+    background-image: url("public/baground/Group.png");
+    background-size: cover;
+    /* background-position: ; */
+}
